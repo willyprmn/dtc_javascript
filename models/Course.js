@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var CoursesSchema = Schema({
+var courseSchema = Schema({
     nama: {
         type: String,
         required: true
@@ -11,9 +11,9 @@ var CoursesSchema = Schema({
         required: true
     },
     keterangan: {
-        type: String
+        type: String,
         require: true
     }
 });
 
-var courses = module.exports = mongoose.model('courses', CoursesSchema);
+var Course = module.exports = mongoose.model('Course', courseSchema);
